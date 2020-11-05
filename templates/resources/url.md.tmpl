@@ -1,0 +1,22 @@
+---
+layout: ""
+page_title: "Resource: URL"
+description: |-
+    Sync a file from a url to a local destination
+---
+
+# Resource: URL
+
+This resource syncs a file from a URL to a local destination.
+
+~> This resource does not support update. Any change will result in a re-download.
+
+!> This resource uses `If-Modified-Since` and `If-None-Match` headers to prevent downloading the same
+file every time even if there were no changes. If the server does not support this, then the file will be downloaded
+again on every run.
+
+## Example Usage
+
+{{tffile "examples/resources/url/resource.tf"}}
+
+{{ .SchemaMarkdown | trimspace }}

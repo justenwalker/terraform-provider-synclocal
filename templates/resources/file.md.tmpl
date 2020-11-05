@@ -1,0 +1,18 @@
+---
+layout: ""
+page_title: "Resource: File"
+description: |-
+    Sync a file from one location to another
+---
+
+# Resource: File
+
+This resource syncs a local file from one place to another.
+
+~> This resource does not support update. Any change will result in a re-copy
+
+## Example Usage
+
+{{tffile "examples/resources/file/resource.tf"}}
+
+{{ .SchemaMarkdown | trimspace }}
